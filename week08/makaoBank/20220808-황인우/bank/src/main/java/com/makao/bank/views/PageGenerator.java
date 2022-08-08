@@ -9,9 +9,15 @@ public abstract class PageGenerator {
         "<title>Makao Bank</title>\n" +
         "</head>\n" +
         "<body>\n" +
+        navigation() +
         content() +
         "</body>\n" +
         "</html>";
+  }
+
+  public String navigation() {
+    return "<a href=\"/\">Home</a> \n" +
+        "<a href=\"/account\">잔액 조회</a> \n";
   }
 
   public abstract String content();
