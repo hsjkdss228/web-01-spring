@@ -3,7 +3,6 @@ package com.makao.bank.views;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class PageGeneratorTest {
   @Test
@@ -11,7 +10,7 @@ class PageGeneratorTest {
     PageGenerator pageGenerator = new PageGenerator() {
       @Override
       public String content() {
-        return "<p>ㅋ</p\n";
+        return "";
       }
     };
 
@@ -19,5 +18,6 @@ class PageGeneratorTest {
 
     assertThat(navigation).contains("Home");
     assertThat(navigation).contains("잔액 조회");
+    assertThat(navigation).contains("계좌 이체");
   }
 }
