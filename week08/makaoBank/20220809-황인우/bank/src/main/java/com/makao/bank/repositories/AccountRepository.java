@@ -12,13 +12,7 @@ public class AccountRepository {
   private Map<String, Account> accounts = new HashMap<>();
 
   public AccountRepository() {
-    Stream.of(
-        new Account("110", "아구몬", 1000),
-        new Account("179", "파피몬", 3000),
-        new Account("352", "텐타몬", 700)
-    ).forEach(account -> {
-      accounts.put(account.identifier(), account);
-    });
+    reset();
   }
 
   public Account find(String identifier) {
@@ -27,5 +21,15 @@ public class AccountRepository {
     }
 
     return null;
+  }
+
+  public void reset() {
+    Stream.of(
+        new Account("110", "아구몬", 1000),
+        new Account("179", "파피몬", 3000),
+        new Account("352", "텐타몬", 700)
+    ).forEach(account -> {
+      accounts.put(account.identifier(), account);
+    });
   }
 }

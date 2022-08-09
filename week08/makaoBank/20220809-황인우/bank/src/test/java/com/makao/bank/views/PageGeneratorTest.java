@@ -18,5 +18,6 @@ class PageGeneratorTest {
 
     assertThat(navigation).contains("Home");
     assertThat(navigation).contains("잔액 조회");
+    assertThat(navigation).contains("계좌 이체");
   }
 }

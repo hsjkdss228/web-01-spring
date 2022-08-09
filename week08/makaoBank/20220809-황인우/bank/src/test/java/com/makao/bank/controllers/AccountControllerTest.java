@@ -1,6 +1,7 @@
 package com.makao.bank.controllers;
 
 import com.makao.bank.repositories.AccountRepository;
+import com.makao.bank.services.AccountService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -19,6 +20,9 @@ class AccountControllerTest {
 
   @SpyBean
   private AccountRepository accountRepository;
+
+  @SpyBean
+  private AccountService accountService;
 
   @Test
   void account() throws Exception {
